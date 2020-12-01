@@ -7,11 +7,11 @@ body{
   background-color: black;
 }
 #secondi{
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
   font-size: 150px;
-  width: 100%;
-  height: 100vh;
 }
