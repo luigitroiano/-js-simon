@@ -16,6 +16,26 @@ $(function() {
   alert('Numeri random: ' + arrayNumber + '\nProva a memorizzare questi numeri...sarai in grado di ricordarli?\nPremi "ok" per scoprirlo.');
 
   // Dopo 30 secondi l’utente deve inserire, un prompt alla volta, i numeri che ha visto precedentemente.
+  var seconds = 5;
+  var interval = setInterval(function() {
+    $('#secondi').html(seconds);
+    if (seconds === 0) {
+      // $('#secondi').hide();
+      for (var index = 0; index < arrayNumber.length; index++) {
+        var numberGuessed = Number(prompt('Inserisci uno dei numeri precedenti'));
+        arrayGuessed.push(numberGuessed);
+      };
+      console.log(arrayGuessed);
+      clearInterval(interval);
+    } else {
+      seconds--;
+    }
+    
+  }, 1000);
+  
+  var arrayGuessed = [];
+  
+  
 
 
 
